@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-1</title>
+</head>
+<body>
+    <h1>Day-1</h1> <br><br>
+    <h5>ques1. Difference between “ == “ and “ === “ operators.
+    </h5><br>
+
+    <pre>sol 1:- Double equals named as Equality Operator. whereas Triple equals named as Identity / Strict equality Operator.
+        Double equals used as Type converting the conversion  
+    
+        Triple equals used as Strict conversion without performing any conversion in operands.
+    
+        <b>Double equals</b> first convert the operands into the same type and then compare i.e comparison would perform once both the operands are of the same type. This is also known as type coercion comparison.
+        
+        On the other hand, <b>triple equals</b> do not perform any type of conversion before comparison and return true only if type and value of both operands are exactly the same.</pre>
+
+        <hr>
+
+    <h5> ques 2:- What is the spread operator?</h5> <br>  
+    <pre>sol 2:- The spread operator ... is used to expand or spread an iterable or an array. 
+        For example,
+        
+        <b>const arrValue = ['My', 'name', 'is', 'Jack'];
+
+            console.log(arrValue);   // ["My", "name", "is", "Jack"]
+            console.log(...arrValue); // My name is Jack</b>
+
+            <b>console.log(...arrValue)</b> is equivalent to <b>console.log('My', 'name', 'is', 'Jack');</b>
+
+    </pre> 
+
+    <hr>
+    <pre>
+        <h5>What are the differences between var, let and const?</h5> <br>
+
+        sol:- Variables declared with var are in the function scope. 
+
+        Variables declared as let and const are in the block scope.
+
+        hoisting is allowed in var but not allowed in let and const. 
+        <!-- Hoisting means that you can define a variable before its declaration. -->
+
+        values can be reassigned in var and let but not in const.
+
+        redeclaration of the variable is allowed in var but not allowed in let and const.
+    <hr>
+        <h5>What is execution context</h5><br>
+
+        sol:- Execution context is the concept for describing the internal working of a code. In JavaScript, the environment that enables the JavaScript code to get executed is what we call JavaScript Execution Context. It is the execution context that decides which code section has access to the functions, variables, and objects used in the code. During the execution context, the specific code gets parsed line by line then the variables and functions are stored in the memory. An execution context is similar to a container that stores variables, and the code gets evaluated and then executed. Thus, it is the execution context that provides an environment for the specific code to get executed. <br>
+
+        Types of Execution Context:- <br>
+
+        The types of execution context in JavaScript are:
+
+        Global Execution Context/GEC
+        Functional Execution Context/FEC
+        Eval Execution Context
+
+        <hr>
+
+        <h5>What is creation phase and execution phase?</h5> <br>
+
+        sol:- In the creation phase, the Execution Context is first associated with an Execution Context Object (ECO). The Execution Context Object stores a lot of important data which the code in the Execution Context uses during its run-time.
+
+        The creation phase occurs in 3 stages, during which the properties of the Execution Context Object are defined and set. These stages are: <br>
+        
+        1.Creation of the Variable Object (VO)
+        2.Creation of the Scope Chain
+        3.Setting the value of the this keyword
+
+
+        right after the creation phase of an Execution Context comes the execution phase. This is the stage where the actual code execution begins.
+
+        Up until this point, the VO contained variables with the values of undefined. If the code is run at this point it is bound to return errors, as we can't work with undefined values.
+
+        At this stage, the JavaScript engine reads the code in the current Execution Context once more, then updates the VO with the actual values of these variables. Then the code is parsed by a parser, gets transpired to executable byte code, and finally gets executed.
+
+<hr>
+        <h5>What is meant by first class functions</h5>
+
+        sol:- First-class functions are JavaScript functions that can behave like variables. They can also be parsed as arguments to higher-order functions. Higher-order functions are functions that return a function or take in a function as an argument.
+<hr>
+
+        <h5>What are closures? Give an example of closure</h5> <br>
+
+        sol:- a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+        A closure is a function having access to the parent scope, even after the parent function has closed.
+
+        example:- 
+
+        <b>const add = (function () {
+            let counter = 0;
+            return function () {counter += 1; return counter}
+          })();
+          
+          add();
+          add();
+          add();
+          
+          // the counter is now 3</b>
+    </pre>
+</body>
+</html>
