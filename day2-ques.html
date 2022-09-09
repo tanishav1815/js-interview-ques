@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-2</title>
+</head>
+<body>
+    <h1>Day-2</h1>
+
+    <pre>
+        <h4>Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()</h4>
+
+        sol:- these are just different ways of invoking or calling a function
+                when you are calling a function using any o fthes 3 then you have to define in the functionthat it will be taking obj as a paramenter.
+                it will assume that the first argument which is coming while calling the function will be an object only.
+
+
+                call:- in case of call each and every argument which is required to be passes to the functionwill be passed individually.
+
+                <b>UserDetails.call(user2, "Google", "backed Developer")</b>
+
+
+                apply:- in case of apply each and every argument which is required to be passed to the function will be passed inside an array.
+
+                <b>UserDetails.call(user2, ["Google", "backed Developer"])</b>
+
+                bind:- in case of bind , it will return you a new function. and this new function you can use anytime , anywhere.
+
+                <hr>
+
+        <h4>What are objects in javascript?</h4>
+
+        sol:- objects are the non-primitive datatypes and are use to store multiple data in the form of key value pairs.
+
+        ex:- <b>
+            const ObjName ={
+                name : 'jack',
+                age : 25,
+            }
+
+            console.log('I am ' + ObjName.age + 'years old');
+        </b>
+
+        <hr>
+
+        <h4>What are function constructors?</h4>
+
+
+        sol:- function constructor is kind of regular function to create multiple objects at a time. when creating function constructor, it is good practice to keep the first letter of the name, capital.
+
+        new and this keyword is mandatory to be used with function constructor.
+
+        ex:-  
+            <b>
+                function Person(name, salary){
+                    this.name = name,
+                    this.salary = salary
+                }
+
+                const person1 = new Person('sanjay', 60000);
+                console.log(person1.name);
+            </b>
+
+         <hr>
+         
+        <h4>Explain prototypes and prototype chaining.</h4> 
+
+
+        sol:- every object in javascript has a built in property , which is called its prototype.
+
+            the prototype property allows us to add properties and methods to any object.
+
+            If an object tries to access the same property that is in the constructor function and the prototype object, the object takes the property from the constructor function.
+
+            ex:-<b>
+                function Person() {
+                    this.name = 'John'
+                }
+                
+                // adding property 
+                Person.prototype.name = 'Peter';
+                Person.prototype.age = 23
+                
+                const person1 = new Person();
+                
+                console.log(person1.name); // John
+                console.log(person1.age); // 23
+            </b>
+
+        <hr> 
+
+        <h4>Give an example of inheritance using function constructor</h4>
+
+
+        sol:-   Using the constructor function, we can create a new object after passing the required parameters.
+            Inheriting a previously defined constructor function means using the parameters of the previously defined function along with adding some new parameters to the newly defined constructor function. For this, we need to use the call() function which allows us to call a function defined somewhere else in the current context. 
+
+            Example: Here, we create an ‘Employee’ constructor function. A new ‘Developer’ constructor function is created that will inherit the basic properties of ‘Employee’ as well as will contain some new properties. 
+
+            <b>
+                function Employee(name, age, gender, id) {
+                    this.name = name;
+                    this.age = age;
+                    this.gender = gender;
+                    this.id = id;
+                };
+          
+                function Developer(name, age, gender, id, 
+                specialization) {
+          
+                    // Calling Employee constructor function
+                    Employee.call(this, name, age, gender, id);
+          
+                    // Adding a new parameter
+                    this.specialization = specialization;
+                }
+                console.log(Employee.prototype);
+                console.log(Developer.prototype);
+            </b>
+
+<hr>
+
+            <h4>What are callbacks?</h4>
+
+            sol:-  A callback is a function passed as an argument to another function. this technique allows a function to all another function.
+
+            a callback function can run after another function has finished.
+
+<hr>
+
+            <h4>What is the use of setTimeout</h4>
+
+        sol:-   setTimeout() calls a passed-in function once after a specified delay, while setInterval() invokes one continuously at a designated time. As JavaScript is a singly-threaded language, both methods allow your code to run asynchronously
+
+<hr>
+
+                <h4>What are pure functions?</h4>
+
+                sol:-  A pure function is a deterministic function. This means when a same input is passed every time, the function will return same output. In mathematical terms it is nothing but a well defined function.
+
+                A pure function will have the following properties:-
+                
+                It depends only on its own arguments.
+                
+                It wont try to change variables out of its scope.
+                
+                It doesn't produce any side effects.
+
+
+
+
+                this example displays a pure function because there are no outside variables involved while the function is performing its tasks. The function returns the same output when a same parameter is passed to it :--
+
+
+                <b>
+                    function pure(arg) {
+                        return 4 * arg;
+                     }
+                     document.write(pure(2));
+                </b>
+    </pre>
+    
+        
+</body>
+</html>
