@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <h1>day 3</h1>
+    <pre>
+
+        <h4>q1.:- What are promises and why do we need them?</h4>
+
+        sol:- Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code. 
+
+        Prior to promises events and callback functions were used but they had limited functionalities and created unmanageable code. 
+        Multiple callback functions would create callback hell that leads to unmanageable code. Also it is not easy for any user to handle multiple callbacks at the same time.
+
+        promises are the ideal choice for handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation. Promises do provide a better chance to a user to read the code in a more effective and efficient manner especially it that particular code is used for implementing multiple asynchronous operations. 
+
+        Benefits of Promises :-
+        Improves Code Readability
+        Better handling of asynchronous operations
+        Better flow of control definition in asynchronous logic
+        Better Error Handling
+
+        A Promise has four states: -
+        fulfilled: Action related to the promise succeeded
+        rejected: Action related to the promise failed
+        pending: Promise is still pending i.e. not fulfilled or rejected yet
+        settled: Promise has fulfilled or rejected
+
+    <hr>
+
+    <h4>What is the purpose of async/await keywords?</h4>
+
+    sol:- Async: It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event-loop. Async functions will always return a value. It makes sure that a promise is returned and if it is not returned then JavaScript automatically wraps it in a promise which is resolved with its value
+
+    ex:- <b>const getData = async() => {
+        var data = "Hello World";
+        return data;
+    }
+    
+    getData().then(data => console.log(data));
+    </b>
+
+    Await: Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
+
+    ex:- 
+    <b>const getData = async() => {
+        var y = await "Hello World";
+        console.log(y);
+    }
+    
+    console.log(1);
+    getData();
+    console.log(2);
+    </b>
+
+    <hr>
+
+    <h4>What is hoisting?</h4>
+
+    sol:- Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Inevitably, this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local
+
+    <hr>
+
+    <h4>What is the DOM?</h4>
+
+    sol:-  The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+    <hr>
+
+    <h4>Difference between undefined vs not defined vs NaN</h4>
+
+    sol:-  undefined: It is a JavaScript keyword that has a special meaning. Everything which gets a space in memory will contain undefined until we assign a value to that memory space.
+
+    not defined: In JavaScript, it is one of the reference errors that JavaScript will throw when someone accesses the variable which is not inside the memory heap.
+
+    NaN is short for "Not-a-Number". In JavaScript, NaN is a number that is not a legal number. The Number. isNaN() method returns true if the value is NaN , and the type is a Number.
+
+    <hr>
+
+    <h4>How many operators do we have in JS ?</h4>
+
+    sol:-  JavaScript Operators are as rich as what you‘d expect from any modern language. There are four categories: arithmetic, comparison, assignment, ternary and logical.
+<hr>
+
+    <h4>What is callback hell</h4>
+
+    sol:-  The situation where callbacks are nested within other callbacks several levels deep, potentially making it difficult to understand and maintain the code.
+<hr>
+
+    <h4>What are arrow functions?</h4>
+
+    sol:-  Arrow functions are a new way to write anonymous function expressions, and are similar to lambda functions in some other programming languages, such as Python. Arrow functions differ from traditional functions in a number of ways, including the way their scope is determined and how their syntax is expressed.
+    </pre>
+</body>
+</html>
